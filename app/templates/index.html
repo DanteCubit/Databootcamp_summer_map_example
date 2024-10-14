@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Awesome Anime Answers</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/minty/bootstrap.min.css">
+    <!-- CSS for Dynamic Table -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.1.7/css/dataTables.dataTables.css" />
+    <!-- Select2 CSS for Multi-select Dropdowns -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <!-- DataTables -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/2.1.7/js/dataTables.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">Awesome Anime Answers</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/tableau">Awesome Anime Exploration</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/recommender">Anime Awesome Recommender</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/presentation">Presentation Deck</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about_us">About Us</a>
+                </li>
+            </ul>
+            <button class="btn btn-outline-light my-2 my-sm-0" id="share-btn">Share!</button>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class = "col-md-2">
+                <!-- <div id = "empty space"></div> -->
+            </div>
+            <div class = "col-md-8">
+                <h1> Awesome Anime Recommender </h1>
+                <br/>
+                <br/>
+                
+                
+                <div>
+                    <p>Anime is an incredibly popular form of entertainment. In the U.S. alone, approximately 72% of the population watches some form of anime.However, with so many choices of titles and genres, it can be overwhelming for someone new to Anime or even an Anime veteran to find new shows and movies they might like. After finding other recommenders and our own team’s enthusiasm for Anime, we thought it would be fun to build our own anime recommender.</p>
+            
+                    <p>Since we are building a Recommender we knew we would use k-nearest neighbor. The primary componemts of Recommnder system are candidate generation, scoring, and re-ranking.</p>
+						<ul>
+							<li>Candidate Generation</li>
+									<p>In this first state, the system starts from huge dataset  and generates a smaller subset of data. Example in Youtube reduces large amount of videos down to hundreds or thousands. This is first stage of Recommendation. Three common candidate generation approaches:</p>
+											<ol>
+												<li>Content-based Filtering</li>
+														<ol>
+															<li>Uses similarity between items to recommend items similar to what user likes</li>
+															<li>Ex: If User watches dog videos, then the system can recommend cute animals videos to that user.</li>
+														</ol>
+												<li>Collaborative Filtering</li>
+														<ol>
+															<li>Recommends items based on the behavior or preferences of similar users.</li>
+															<li>Ex: If used A is similar to user B, and user B likes video 1, then the system can recommend video 1 to user A.</li>
+														</ol>
+												<li>Hybrid Recommender</li>
+														<ol>
+															<li>Hybrid recommender systems combine collaborative filtering (analyzing user behavior and preferences) and content-based filtering (focusing on item characteristics) to provide more accurate and diverse recommendations.</li>
+															
+														</ol>		
+											</ol>
+							<li>Scoring</li>
+									<p>This model scores and ranks the candidates in order to select the set of items (on the order of 10) to display to the user. This is subset of Candidate generation</p>
+							<li>Re-ranking</li>
+									<p>This is final ranking which takes into account dislikes or likes of newer content. Re-ranking helps to ensure diversity, freshness and fairness.</p>
+						</ul>
+                    <p>To determine the degree of similarity, most recommendation systems rely on one or more of the following: Manhattan, Eulidean and Cosine Distance. Similar recommender was created by Harsh Talajia as shown below</p>
+					
+                    <div class="video-container">
+                        <iframe width="560" height="315" src="https://harshtalajia.shinyapps.io/anime-manga_similar_finder/" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class = "col-md-2">
+                <!-- <div id = "empty space"></div> -->
+            </div>
+            </div>
+        </div>
+     
+    </div>
+
+</body>
+
+</html>
